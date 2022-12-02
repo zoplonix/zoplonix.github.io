@@ -1,1 +1,390 @@
-Why does HTML and JavaScripy have to rock so much?
+<!--
+                         _,.._                         __
+                   ,'     '.                      /  `.
+                  /        ,\                     |    \
+  MERRY CHRISTMAS |;       ;;''-------.._         ;     \
+     from the     \;;     ,;' _.-'       `.     .-.\     ;
+       _  _ ___    ';;,,-''``''-._         \    '  \\    |
+  |\ |/ \|_) | |_|     /          `'-._     |    \  '    ;
+  | \|\_/| \ | | |     |               `.   |.-.  \     ;  _
+    _  _     _         \_;,.._           ',/ |  |  |   /,'` `\
+   |_)/ \|  |_      _,,_/` / .'-.          `,\  \  ;  ,'      |
+   |  \_/|_ |_   ,-'  ,--'` |   o`-.        ;;|  `-' ;  .-    |
+               ;`    /      '.__  O `'.     _/       | /`    /
+              /      |_,--._,'  `.   | `.;/'  `'-. _ ;.-._,.'
+              /    _,'      |    |'-'  / |   .--.,' '\o  )_
+            .-;   `-..._     `-.-'     | \      _| O .'-'` `.
+          /`  |         '-'7     \  |  |  |'--'` /'-'.--.    `.
+        .| | <;            \      :-\  |  | ___ /    '._'     ;
+       / '-\__)\            '.    ;__,/   ;`   | .-.          |
+    ,.--.,  /   `.            \  /        |'--.\  |           /'-.
+   /'     `;`     `,           '/        /'--.  `-`.         / _  \
+   \,,-.   ;.       '-.._              ,'     `;    `-.___.-'`/'   |
+   /    `-,'.'.     /     `'-.__   _,-'    .--'/             |     /
+  /    ,  \  '.` f\/     /      `''`     /`   /              `.__.'\
+ |     ;  |.   `/ .`'-._;             __.L   ;                  \  ;
+ \    ,'`-' `._/ / `'-. |._____....--'_,-7\ /                   |   \
+  `''` |;,     `-.`'-.| |__.....--'''`_,'`|;                    \_|  |
+        \;,       `'-.__|__.,,__,,.."'`   ;|                      ;`-'
+         `:_             `'`              / \                     /
+            `._                    ,.__.-'   `._             mx .'
+           .-,|`-...________.,---'`|_           `-....____..--'`
+  ._       |   `.     ,-|     _,,,-' `.             \   |  /
+    '-..   .-._, `''"/   `---''       |              `. | ;        _
+        _,'   \;`-._ \_      _,-'`-.-'               _| | |_   .--'
+     .'`           `'"`|"`"`-;/     `' -. -..__   ,-' ` |   `'. _
+..--'\_       _,-'\___'    ,             |     ' / ,'  ,'.  `._) '-..
+      ' `"'''`         '---'`-..._____.-'        '-'--'   `'-'
+
+------------------------------------------------
+This ASCII pic can be found at
+https://asciiart.website/index.php?art=holiday/christmas/santa
+-->
+<html>
+
+<head>
+    <title>Santa's Early Gift - Claim yours now!</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-color: #B1DEF4;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #wrapper {
+            width: 95%;
+            max-width: 960px;
+            margin: 10px auto;
+            background: #fff;
+            border-radius: 30px;
+        }
+
+        table {
+            width: 100%;
+            padding: 10px;
+            border: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        tr {
+            border: none
+        }
+
+        td:nth-child(2) {
+            text-align: right;
+            color: green;
+            border: none;
+        }
+
+        .border {
+            border-collapse: collapse;
+        }
+
+        .border td {
+            border-bottom: 1px dashed #aaa;
+        }
+
+        #claim {
+            width: 100%;
+            background-color: #ffa41c;
+            border: 1px solid #bf6b00;
+            height: 60px;
+            border-radius: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 30px 0 0 0;
+        }
+
+        #claim:hover,
+        #claim:active {
+            color: white
+        }
+
+        #claim:disabled,
+        #claim[disabled] {
+            color: black;
+        }
+
+        #box {
+            margin: 0 auto 30px auto;
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        #bow {
+            width: 15%;
+            padding-bottom: 6%;
+            background: red
+        }
+
+        #top {
+            background-color: red;
+            background-image: linear-gradient(90deg, #ff0000 33.33%, #ffffff 33.33%, #ffffff 50%, #ff0000 50%, #ff0000 83.33%, #ffffff 83.33%, #ffffff 100%);
+            background-size: 120% 100%;
+            height: 0;
+            width: 50%;
+            padding-bottom: 10%;
+            border: 60px solid red;
+            border-bottom: none;
+            border-top: none;
+        }
+
+        #bottom {
+            background: red;
+            background-image: linear-gradient(90deg, #ff0000 33.33%, #ffffff 33.33%, #ffffff 50%, #ff0000 50%, #ff0000 83.33%, #ffffff 83.33%, #ffffff 100%);
+            background-size: 120% 100%;
+            height: 0;
+            width: 50%;
+            padding-bottom: 40%;
+            border: 10px solid red;
+            border-top: none;
+        }
+
+        #heart {
+            fill: red;
+            width: 50%;
+            animation: pulse 1s ease infinite;
+            margin: 0 auto;
+            opacity: 0;
+            transition: 1s opacity;
+            margin-top: -55%;
+        }
+
+        #heart text {
+            fill: white;
+            font-size: 4px;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .open-box {
+            transform: scale(2) !important;
+            opacity: 0 !important;
+            transition: all 1s;
+        }
+
+        #progress {
+            display: none;
+        }
+
+        #sponsor {
+            width: 95%;
+            max-width: 960px;
+            margin: 10px auto;
+            display: block;
+            text-align: center;
+        }
+
+        .dot1 {
+            animation: visibility 1.5s linear infinite;
+        }
+
+        @keyframes visibility {
+            0% {
+                opacity: 1;
+            }
+
+            65% {
+                opacity: 1;
+            }
+
+            66% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .dot2 {
+            animation: visibility2 1.5s linear infinite;
+        }
+
+        @keyframes visibility2 {
+            0% {
+                opacity: 0;
+            }
+
+            21% {
+                opacity: 0;
+            }
+
+            22% {
+                opacity: 1;
+            }
+
+            65% {
+                opacity: 1;
+            }
+
+            66% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .dot3 {
+            animation: visibility3 1.5s linear infinite;
+        }
+
+        @keyframes visibility3 {
+            0% {
+                opacity: 0;
+            }
+
+            43% {
+                opacity: 0;
+            }
+
+            44% {
+                opacity: 1;
+            }
+
+            65% {
+                opacity: 1;
+            }
+
+            66% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <table id="main-table">
+            <tr>
+                <td colspan="2">
+                    <h1>Santa's Early Gift</small>
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <div id="box">
+                        <div id="bow"></div>
+                        <div id="top">
+
+                        </div>
+                        <div id="bottom"></div>
+                    </div>
+                    <svg id="heart" viewBox="0 0 32 29.6">
+                        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                                        	c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+                        <text x="3.5" y="13">You are loved!</text>
+
+                    </svg>
+                </td>
+            </tr>
+            <tr class="border">
+                <td colspan="2" style="font-style:italic">
+                    <p>Santa is giving everyone an early gift this year! There are no hidden fees or fine print! Simply
+                        place your order below and wait for your gift to arrive!</p>
+                    <br>
+                </td>
+            </tr>
+            <tr class="border">
+                <td>Price:</td>
+                <td>Free!</td>
+            </tr>
+            <tr class="border">
+                <td>Shipping:</td>
+                <td>Free!</td>
+            </tr>
+            <tr id="progress">
+                <td colspan="2" align="center">
+                    <h2><span id="progress-text">Order placed</span><span class="dot dot1">.</span><span
+                            class="dot dot2">.</span><span class="dot dot3">.</span></h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button id="claim">Claim My Gift!</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <small id="sponsor">&copy; 2022 - Sponsored by zoplonix</small>
+
+
+    <script>
+        document.getElementById('claim').onclick = () => {
+            var trsToHide = document.getElementsByClassName('border');
+
+            for (var tr of trsToHide) {
+                tr.style.display = 'none'
+            }
+
+            document.getElementById('progress').style.display = 'revert'
+
+            document.getElementById('claim').innerHTML = "Order Placed!"
+            document.getElementById('claim').disabled = true;
+
+            setTimeout(() => {
+                document.getElementById('progress-text').innerHTML = 'Shipping label created'
+            }, 2000)
+
+            setTimeout(() => {
+                document.getElementById('progress-text').innerHTML = 'Package on route'
+            }, 6000)
+
+            setTimeout(() => {
+                document.getElementById('progress-text').innerHTML = 'Out for delivery'
+            }, 12000)
+
+            setTimeout(() => {
+                document.getElementById('progress-text').innerHTML = 'Arrived at destination!';
+
+                var dotsToHide = document.getElementsByClassName('dot');
+
+                for (var dot of dotsToHide) {
+                    dot.style.display = 'none'
+                }
+
+                document.getElementById('claim').style.display = 'none'
+            }, 15000)
+
+            setTimeout(() => {
+                document.getElementById('box').classList.add('open-box')
+            }, 16000)
+
+            setTimeout(() => {
+                document.getElementById('heart').style.opacity = '1'
+            }, 17000)
+
+
+            //..................
+        }
+    </script>
+</body>
+
+</html>
